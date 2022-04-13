@@ -1,5 +1,6 @@
+import { AxiosResponse } from 'axios';
 import api from './api';
 
 export const cepService = {
-    get: (cep: string) => api.get(`${cep}/json`)
+    get: (cep: string): Promise<AxiosResponse> => api.get(`${cep}/json`)
 }
